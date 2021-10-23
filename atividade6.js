@@ -45,6 +45,10 @@ const funcionarios = [
 ];
 // usando filter para retornar uma array de gerentes
 const managers = funcionarios.filter(funcionario => funcionario.categoria === 'gerente');
+
+console.log('------------------Array de gerentes----------------------')
+console.log(managers);
+
 // usando reduce para enconatrar o menor Id
 const funcionario={
     id: 99999
@@ -57,10 +61,16 @@ const lowestId = funcionarios.reduce((anterior, atual) => {
 
 },funcionario);
 
-
+console.log('-----------------Menor Id -----------------------------')
 console.log(lowestId);
 
+// usando map para para colocar todos os nomes no formato UpperCase
+ const nameUpperCase = funcionarios.map( funcionario =>{
+    funcionario.nome= funcionario.nome.toUpperCase();
+    return funcionario;
 
+});
+console.log('------------nome formato UpperCase ----------------------------')
+console.log(nameUpperCase);
 
-// usando map
 
